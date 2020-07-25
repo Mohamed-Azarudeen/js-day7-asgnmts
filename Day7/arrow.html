@@ -1,0 +1,21 @@
+<!-- Question-8) Arrow function -->
+<html>
+    <head>
+        <title>Example for Arrow function</title>
+    </head>
+    <body>
+        <h1>Arrow function</h1>
+        <script>
+            let ask = (question, yes, no)=>{
+                if( confirm(question)){
+                    return yes;
+                }
+                else{
+                    return no;
+                }
+            }
+            let res = ask("Do you agree?", "You agreed.", "You canceled the execution.");
+            console.log(res);
+        </script>
+    </body>
+</html>

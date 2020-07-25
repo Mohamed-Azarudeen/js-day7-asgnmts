@@ -1,0 +1,58 @@
+<!-- Question-2) Class -->
+<html>
+    <head>
+        <title>Example for Class</title>
+    </head>
+    <body>
+        <h1>Class</h1>
+        <script>
+            class User {
+                constructor(name, age, email){
+                    this.name = name;
+                    this.age = age;
+                    this.email = email;
+                    this.coins = 0;
+                    this.courses = []
+                }
+                login(){
+                console.log(`${this.name} has logged in`);
+                return this;
+                }
+                logout(){
+                console.log(`${this.name} has logged out`);
+                return this;
+                }
+            }
+            class Moderator extends User{
+                constructor(name, age, email, coins){
+                    super(name, age, email);
+                    this.coins = coins;
+                }
+                addCoins(){
+                    this.coins++;
+                    return this;
+                }
+                removeCoins(){
+                    this.coins--;
+                    return this;
+                }
+            }
+            class Admin extends Moderator{
+                addCourse(user, course){
+                    user.courses.push(course);
+                    console.log(user);
+                }
+                deleteCourse(user, course){
+                    users = users.filter(u => {
+                        return u.course != user.course;
+                    })
+                }
+            }
+            let user1 = new User('Rio',22,'r@gamil.com');
+            let user2 = new User('Denver',29,'d@gamil.com');
+            let mod = new Moderator('Tokyo',27,'r@gamil.com');
+            let admin = new Admin('Professor',35,'r@gamil.com');
+            let users = [user1, user2, mod, admin];
+        </script>
+    </body>
+</html>

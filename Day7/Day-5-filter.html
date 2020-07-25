@@ -1,0 +1,19 @@
+<!-- Question-1) Filter -->
+<html>
+    <head>
+        <title>Example for Filter</title>
+    </head>
+    <body>
+        <h1>Filter</h1>
+        <script>
+            let n = Number(prompt("Enter a positive number: "));
+            let odd = []
+            for(let i=1; i<=n; i++){
+                odd.push(i);
+            }
+            odd = odd.filter(el=> el%2 != 0).map(el=>el**3);
+            console.log(odd);
+
+        </script>
+    </body>
+</html>
